@@ -4,31 +4,30 @@ import React from "react";
 
 import Logo from "@/assets/logo-ringku.svg";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Fab } from "@mui/material";
 import IconButton from "@/components/Button/IconButton";
 
-const sidebarItems = [
-  {
-    id: "wallet",
-    label: "My Wallet",
-    route: "/",
-  },
-  {
-    id: "card",
-    label: "My Card",
-    route: "/card",
-  },
-  {
-    id: "chart",
-    label: "Financial Chart",
-    route: "/chart",
-  },
-  {
-    id: "transaction",
-    label: "Recent Transactions",
-    route: "/transaction",
-  },
-];
+// const sidebarItems = [
+//   {
+//     id: "wallet",
+//     label: "My Wallet",
+//     route: "/",
+//   },
+//   {
+//     id: "card",
+//     label: "My Card",
+//     route: "/card",
+//   },
+//   {
+//     id: "chart",
+//     label: "Financial Chart",
+//     route: "/chart",
+//   },
+//   {
+//     id: "transaction",
+//     label: "Recent Transactions",
+//     route: "/transaction",
+//   },
+// ];
 
 const Sidebar = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -51,15 +50,14 @@ const Sidebar = (props: {
           icon={<MenuIcon fontSize="small" />}
           size="small"
           variant="filled"
-          onClick={(e: any) => {
-            e.stopPropagation;
+          onClick={() => {
             props.setSidebarOpen(!props.sidebarOpen);
           }}
         />
       </div>
 
       {/* Sidebar Menu */}
-      <div>Tes</div>
+      <div className="px-[18px]">Text</div>
     </aside>
   );
 };

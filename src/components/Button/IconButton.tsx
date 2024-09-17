@@ -1,11 +1,11 @@
 import { Fab } from "@mui/material";
-import React from "react";
+import React, { ReactNode } from "react";
 
 interface Props {
-  icon: any;
+  icon: ReactNode;
   size: "small" | "medium" | "large";
   variant: "filled" | "transparent";
-  onClick?: any;
+  onClick?: () => void;
 }
 
 const IconButton = ({ icon, size, variant, onClick }: Props) => {

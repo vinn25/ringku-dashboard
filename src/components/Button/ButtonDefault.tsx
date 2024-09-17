@@ -1,8 +1,10 @@
+import { ReactNode } from "react";
+
 interface Props {
   text: string;
   size: "sm" | "lg";
   variant: "violet" | "neutral";
-  icon?: any;
+  icon?: ReactNode;
   onClick?: () => void;
   fullWidth?: boolean;
   disabled?: boolean;
@@ -26,7 +28,9 @@ const ButtonDefault = ({
 
   return variant === "violet" ? (
     <button
-      className={`flex justify-center items-center gap-2 border border-transparent rounded-[1000px] ${colorVariant} ${textSize} ${paddingSize}`}
+      className={`flex justify-center items-center gap-2 border border-transparent rounded-[1000px] ${colorVariant} ${textSize} ${paddingSize} ${
+        fullWidth && "w-full"
+      }`}
       type="button"
       onClick={onClick}
       disabled={disabled}
@@ -36,7 +40,9 @@ const ButtonDefault = ({
     </button>
   ) : (
     <button
-      className={`flex justify-center items-center gap-2 border rounded-[1000px] ${colorVariant} ${textSize} ${paddingSize}`}
+      className={`flex justify-center items-center gap-2 border rounded-[1000px] ${colorVariant} ${textSize} ${paddingSize} ${
+        fullWidth && "w-full"
+      }`}
       type="button"
       onClick={onClick}
       disabled={disabled}
