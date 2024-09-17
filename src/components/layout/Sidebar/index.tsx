@@ -5,6 +5,7 @@ import React from "react";
 import Logo from "@/assets/logo-ringku.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Fab } from "@mui/material";
+import IconButton from "@/components/Button/IconButton";
 
 const sidebarItems = [
   {
@@ -46,16 +47,19 @@ const Sidebar = (props: {
             <Image src={Logo} alt="Logo" width={160} height={53.44} priority />
           </Link>
         )}
-        <Fab
+        <IconButton
+          icon={<MenuIcon fontSize="small" />}
           size="small"
-          onClick={(e) => {
+          variant="filled"
+          onClick={(e: any) => {
             e.stopPropagation;
             props.setSidebarOpen(!props.sidebarOpen);
           }}
-        >
-          <MenuIcon />
-        </Fab>
+        />
       </div>
+
+      {/* Sidebar Menu */}
+      <div>Tes</div>
     </aside>
   );
 };
