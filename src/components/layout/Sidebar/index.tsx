@@ -5,29 +5,31 @@ import React from "react";
 import Logo from "@/assets/logo-ringku.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@/components/Button/IconButton";
+import SidebarItem from "@/components/layout/Sidebar/SidebarItem";
+import SidebarItemCollapse from "@/components/layout/Sidebar/SidebarItemCollapse";
 
-// const sidebarItems = [
-//   {
-//     id: "wallet",
-//     label: "My Wallet",
-//     route: "/",
-//   },
-//   {
-//     id: "card",
-//     label: "My Card",
-//     route: "/card",
-//   },
-//   {
-//     id: "chart",
-//     label: "Financial Chart",
-//     route: "/chart",
-//   },
-//   {
-//     id: "transaction",
-//     label: "Recent Transactions",
-//     route: "/transaction",
-//   },
-// ];
+const sidebarItems = [
+  {
+    id: "wallet",
+    label: "My Wallet",
+    route: "/",
+  },
+  {
+    id: "card",
+    label: "My Card",
+    route: "/card",
+  },
+  {
+    id: "chart",
+    label: "Financial Chart",
+    route: "/chart",
+  },
+  {
+    id: "transaction",
+    label: "Recent Transactions",
+    route: "/transaction",
+  },
+];
 
 const Sidebar = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -57,7 +59,21 @@ const Sidebar = (props: {
       </div>
 
       {/* Sidebar Menu */}
-      <div className="px-[18px]">Text</div>
+      <div className="px-[18px]">
+        <nav>
+          <div>
+            <ul>
+              {sidebarItems.map((item) =>
+                !props.sidebarOpen ? (
+                  <SidebarItem key={item.id} item={item} />
+                ) : (
+                  <SidebarItemCollapse key={item.id} item={item} />
+                )
+              )}
+            </ul>
+          </div>
+        </nav>
+      </div>
     </aside>
   );
 };

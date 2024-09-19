@@ -1,9 +1,12 @@
 import DefaultLayout from "@/components/layout/DefaultLayout";
+import React from "react";
 
-export default function Home() {
+const Card = () => {
   return (
     <div>
-      <DefaultLayout>Tes</DefaultLayout>
+      <DefaultLayout />
     </div>
   );
-}
+};
+
+export default Card;
