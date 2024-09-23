@@ -4,7 +4,12 @@ import React from "react";
 const Card = () => {
   return (
     <div>
-      <DefaultLayout />
+      <DefaultLayout
+        title="My Card"
+        description="Keep track your financial plan"
+      >
+        Card
+      </DefaultLayout>
     </div>
   );
 };

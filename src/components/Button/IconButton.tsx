@@ -11,7 +11,7 @@ interface Props {
 const IconButton = ({ icon, size, variant, onClick }: Props) => {
   return variant === "filled" ? (
     <Fab
-      className="bg-violet-500 hover:bg-violet-600 text-iconColor-white shadow-none"
+      className="bg-violet-500 focus:shadow-none hover:bg-violet-600 text-iconColor-white shadow-none"
       size={size}
       onClick={onClick}
     >
@@ -19,7 +19,7 @@ const IconButton = ({ icon, size, variant, onClick }: Props) => {
     </Fab>
   ) : (
     <Fab
-      className="bg-transparent hover:bg-neutral-20 text-iconColor-default shadow-none"
+      className="bg-transparent focus:shadow-none hover:bg-neutral-20 text-iconColor-default shadow-none"
       size={size}
       onClick={onClick}
     >

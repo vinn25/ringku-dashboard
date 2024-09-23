@@ -7,6 +7,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@/components/Button/IconButton";
 import SidebarItem from "@/components/layout/Sidebar/SidebarItem";
 import SidebarItemCollapse from "@/components/layout/Sidebar/SidebarItemCollapse";
+import { Settings } from "@mui/icons-material";
+import { Avatar } from "@mui/material";
+import SidebarBottom from "@/components/layout/Sidebar/SidebarBottom";
+import SidebarBottomCollapse from "@/components/layout/Sidebar/SidebarBottomCollapse";
 
 const sidebarItems = [
   {
@@ -31,18 +35,35 @@ const sidebarItems = [
   },
 ];
 
+const sidebarBottom = [
+  {
+    id: "setting",
+    label: "Settings",
+    icon: <Settings />,
+  },
+  {
+    id: "profile",
+    label: "User",
+    icon: <Avatar className="size-[25px]" alt="user" />,
+  },
+];
+
 const Sidebar = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
   return (
     <aside
-      className={`fixed left-0 top-0 z-9999 h-screen ${
+      className={`fixed left-0 top-0 z-9999 flex h-screen ${
         props.sidebarOpen ? "w-22" : "w-72"
       } translate-x-0 flex-col overflow-y-hidden bg-black duration-300 ease-linear`}
     >
       {/* Sidebar Header */}
-      <div className="flex items-center justify-between gap-2 px-[18px] py-5">
+      <div
+        className={`flex items-center justify-between gap-2 px-[18px] pt-6 pb-5 ${
+          props.sidebarOpen && "pt-8"
+        }`}
+      >
         {!props.sidebarOpen && (
           <Link href="/">
             <Image src={Logo} alt="Logo" width={160} height={53.44} priority />
@@ -72,6 +93,21 @@ const Sidebar = (props: {
               )}
             </ul>
           </div>
+        </nav>
+      </div>
+
+      {/* Sidebar Bottom */}
+      <div className="px-[18px] mt-[170px]">
+        <nav>
+          <ul>
+            {sidebarBottom.map((item) =>
+              !props.sidebarOpen ? (
+                <SidebarBottom key={item.id} item={item} />
+              ) : (
+                <SidebarBottomCollapse key={item.id} item={item} />
+              )
+            )}
+          </ul>
         </nav>
       </div>
     </aside>

@@ -4,7 +4,7 @@ import React from "react";
 const Transaction = () => {
   return (
     <div>
-      <DefaultLayout />
+      <DefaultLayout title="Recent Transaction">Transaction</DefaultLayout>
     </div>
   );
 };

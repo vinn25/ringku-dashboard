@@ -4,7 +4,12 @@ import React from "react";
 const Chart = () => {
   return (
     <div>
-      <DefaultLayout />
+      <DefaultLayout
+        title="Financial Chart"
+        description="Keep track your financial plan"
+      >
+        Financial Chart
+      </DefaultLayout>
     </div>
   );
 };
