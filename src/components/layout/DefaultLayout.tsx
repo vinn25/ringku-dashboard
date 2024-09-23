@@ -26,7 +26,7 @@ const DefaultLayout = (props: {
               <div className="text-title-md text-neutral-100 font-medium">
                 {props.title}
               </div>
-              <div className="text-text-sm text-neutral-80">
+              <div className="text-text-sm text-neutral-80 font-medium">
                 {props.description}
               </div>
             </div>
