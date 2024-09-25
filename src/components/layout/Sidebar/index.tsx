@@ -56,48 +56,56 @@ const Sidebar = (props: {
     <aside
       className={`fixed left-0 top-0 z-9999 flex h-screen ${
         props.sidebarOpen ? "w-22" : "w-72"
-      } translate-x-0 flex-col overflow-y-hidden bg-black duration-300 ease-linear`}
+      } translate-x-0 flex-col justify-between overflow-y-hidden bg-black duration-300 ease-linear`}
     >
       {/* Sidebar Header */}
-      <div
-        className={`flex items-center justify-between gap-2 px-[18px] pt-6 pb-5 ${
-          props.sidebarOpen && "pt-8"
-        }`}
-      >
-        {!props.sidebarOpen && (
-          <Link href="/">
-            <Image src={Logo} alt="Logo" width={160} height={53.44} priority />
-          </Link>
-        )}
-        <IconButton
-          icon={<MenuIcon fontSize="small" />}
-          size="small"
-          variant="filled"
-          onClick={() => {
-            props.setSidebarOpen(!props.sidebarOpen);
-          }}
-        />
-      </div>
+      <div>
+        <div
+          className={`flex items-center justify-between gap-2 px-[18px] pt-6 pb-5 ${
+            props.sidebarOpen && "pt-8"
+          }`}
+        >
+          {!props.sidebarOpen && (
+            <Link href="/">
+              <Image
+                src={Logo}
+                alt="Logo"
+                width={160}
+                height={53.44}
+                priority
+              />
+            </Link>
+          )}
+          <IconButton
+            icon={<MenuIcon fontSize="small" />}
+            size="small"
+            variant="filled"
+            onClick={() => {
+              props.setSidebarOpen(!props.sidebarOpen);
+            }}
+          />
+        </div>
 
-      {/* Sidebar Menu */}
-      <div className="px-[18px]">
-        <nav>
-          <div>
-            <ul>
-              {sidebarItems.map((item) =>
-                !props.sidebarOpen ? (
-                  <SidebarItem key={item.id} item={item} />
-                ) : (
-                  <SidebarItemCollapse key={item.id} item={item} />
-                )
-              )}
-            </ul>
-          </div>
-        </nav>
+        {/* Sidebar Menu */}
+        <div className="px-[18px]">
+          <nav>
+            <div>
+              <ul>
+                {sidebarItems.map((item) =>
+                  !props.sidebarOpen ? (
+                    <SidebarItem key={item.id} item={item} />
+                  ) : (
+                    <SidebarItemCollapse key={item.id} item={item} />
+                  )
+                )}
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
 
       {/* Sidebar Bottom */}
-      <div className="px-[18px] mt-[170px]">
+      <div className="px-[18px] pb-6">
         <nav>
           <ul>
             {sidebarBottom.map((item) =>
