@@ -24,7 +24,7 @@ const IconButton = ({
 }: Props) => {
   return variant === "filled" ? (
     <Fab
-      className="bg-violet-500 focus:shadow-none hover:bg-violet-600 text-iconColor-white shadow-none"
+      className={`bg-violet-500 disabled:bg-violet-500 disabled:text-iconColor-white focus:shadow-none hover:bg-violet-600 text-iconColor-white shadow-none`}
       size={size}
       onClick={onClick}
       disabled={disabled}
@@ -36,7 +36,7 @@ const IconButton = ({
     </Fab>
   ) : (
     <Fab
-      className="bg-transparent focus:shadow-none hover:bg-neutral-20 text-iconColor-default shadow-none"
+      className="bg-transparent disabled:bg-transparent disabled:text-iconColor-default focus:shadow-none hover:bg-neutral-20 text-iconColor-default shadow-none"
       size={size}
       onClick={onClick}
       disabled={disabled}

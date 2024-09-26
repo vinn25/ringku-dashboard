@@ -1,4 +1,5 @@
 import DefaultLayout from "@/components/layout/DefaultLayout";
+import LayoutCard from "@/components/ui/card/LayoutCard";
 import React from "react";
 
 const Card = () => {
@@ -8,7 +9,7 @@ const Card = () => {
         title="My Card"
         description="Keep track your financial plan"
       >
-        Card
+        <LayoutCard />
       </DefaultLayout>
     </div>
   );

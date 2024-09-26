@@ -5,7 +5,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-999 flex w-full bg-white border-b-neutral-40 border-b-2">
+    <header className="sticky top-0 z-9999 flex w-full bg-white border-b-neutral-40 border-b-2">
       <div className="flex grow items-center justify-between shadow-2 md:px-10 p-8">
         <div className="flex items-center gap-6 m-0">
           <IconButton

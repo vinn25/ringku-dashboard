@@ -10,8 +10,7 @@ const CreateWallet = () => {
           icon={<Add fontSize="small" />}
           size="small"
           variant="filled"
-          disableTouchRipple={true}
-          disableFocusRipple={true}
+          disabled
         />
       </div>
       <div className="text-text-lg text-violet-500 font-semibold">
