@@ -1,7 +1,10 @@
 "use client";
 
+import IconButton from "@/components/Button/IconButton";
+import InputField from "@/components/InputField/InputField";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
+import { Search } from "@mui/icons-material";
 import React, { useState } from "react";
 
 const DefaultLayout = (props: {
@@ -33,9 +36,17 @@ const DefaultLayout = (props: {
                 </div>
               </div>
               {props.search && (
-                <div className="flex gap-3">
-                  <div>Search</div>
-                  <div>SearchButton</div>
+                <div className="flex items-center gap-3">
+                  <div>
+                    <InputField placeholder="Search" inputSize="lg" />
+                  </div>
+                  <div>
+                    <IconButton
+                      icon={<Search fontSize="medium" />}
+                      size="medium"
+                      variant="filled"
+                    />
+                  </div>
                 </div>
               )}
             </div>
