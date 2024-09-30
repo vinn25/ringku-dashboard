@@ -5,6 +5,7 @@ interface Props {
   size: "sm" | "lg";
   variant: "violet" | "neutral";
   icon?: ReactNode;
+  iconPlace?: "front" | "behind";
   onClick?: () => void;
   fullWidth?: boolean;
   disabled?: boolean;
@@ -15,6 +16,7 @@ const ButtonDefault = ({
   size,
   variant,
   icon,
+  iconPlace,
   onClick,
   fullWidth,
   disabled,
@@ -35,8 +37,9 @@ const ButtonDefault = ({
       onClick={onClick}
       disabled={disabled}
     >
-      {icon}
+      {iconPlace === "front" && icon}
       {text}
+      {iconPlace === "behind" && icon}
     </button>
   ) : (
     <button
@@ -47,8 +50,9 @@ const ButtonDefault = ({
       onClick={onClick}
       disabled={disabled}
     >
-      {icon}
+      {iconPlace === "front" && icon}
       {text}
+      {iconPlace === "behind" && icon}
     </button>
   );
 };

@@ -3,6 +3,7 @@ import ChevronRight from "@/assets/icon-chevron-right.svg";
 import { MoreVert } from "@mui/icons-material";
 import Image from "next/image";
 import React from "react";
+import ButtonDefault from "@/components/Button/ButtonDefault";
 
 const HelpOptions = [
   {
@@ -56,8 +57,8 @@ const HelpInfo = () => {
           </div>
         ))}
       </div>
-      <div className="bg-neutral-10 hover:bg-neutral-20 border-neutral-40 text-text-lg font-medium border-2 text-neutral-70 rounded-full px-6 py-3 w-fit cursor-pointer shadow-sm">
-        Look More
+      <div>
+        <ButtonDefault size="lg" text="Look More" variant="neutral" />
       </div>
     </div>
   );

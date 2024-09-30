@@ -8,6 +8,7 @@ const DefaultLayout = (props: {
   children: React.ReactNode;
   title: string;
   description?: string;
+  search?: boolean;
 }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -22,13 +23,21 @@ const DefaultLayout = (props: {
         <Header />
         <main>
           <div className="mx-auto max-w-screen-2xl bg-white px-9 pb-15 pt-6 text-black">
-            <div className="flex flex-col gap-2 mb-8">
-              <div className="text-title-md text-neutral-100 font-medium">
-                {props.title}
+            <div className="flex flex-row justify-between items-center mb-8">
+              <div className="flex flex-col gap-2 ">
+                <div className="text-title-md text-neutral-100 font-medium">
+                  {props.title}
+                </div>
+                <div className="text-text-sm text-neutral-80 font-medium">
+                  {props.description}
+                </div>
               </div>
-              <div className="text-text-sm text-neutral-80 font-medium">
-                {props.description}
-              </div>
+              {props.search && (
+                <div className="flex gap-3">
+                  <div>Search</div>
+                  <div>SearchButton</div>
+                </div>
+              )}
             </div>
             {props.children}
           </div>

@@ -1,4 +1,5 @@
 import DefaultLayout from "@/components/layout/DefaultLayout";
+import LayoutChart from "@/components/ui/chart/LayoutChart";
 import React from "react";
 
 const Chart = () => {
@@ -8,7 +9,7 @@ const Chart = () => {
         title="Financial Chart"
         description="Keep track your financial plan"
       >
-        Financial Chart
+        <LayoutChart />
       </DefaultLayout>
     </div>
   );
