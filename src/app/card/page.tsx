@@ -1,15 +1,18 @@
 import DefaultLayout from "@/components/layout/DefaultLayout";
-import LayoutWallet from "@/components/ui/wallet/LayoutWallet";
+import LayoutCard from "@/components/ui/card/LayoutCard";
+import React from "react";
 
-export default function Home() {
+const Card = () => {
   return (
     <div>
       <DefaultLayout
-        title="My Wallet"
+        title="My Card"
         description="Keep track your financial plan"
       >
-        <LayoutWallet />
+        <LayoutCard />
       </DefaultLayout>
     </div>
   );
-}
+};
+
+export default Card;
