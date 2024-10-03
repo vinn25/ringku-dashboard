@@ -15,7 +15,7 @@ const InputField = ({ inputSize, onClick, fullWidth, ...props }: Props) => {
       <span
         className={`inline-flex gap-2 ${
           fullWidth && "w-full"
-        } bg-neutral-10 border-neutral-40 border-2 rounded-full focus-within:border-violet-500 focus-within:border-2 text-neutral-70 ${paddingSize} ${textSize}`}
+        } bg-neutral-10 border-neutral-40 border-2 rounded-full w-[342px] focus-within:border-violet-500 focus-within:border-2 text-neutral-70 ${paddingSize} ${textSize}`}
         onClick={onClick}
       >
         <input

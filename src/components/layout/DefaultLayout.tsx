@@ -38,7 +38,7 @@ const DefaultLayout = (props: {
               {props.search && (
                 <div className="flex items-center gap-3">
                   <div>
-                    <InputField placeholder="Search" inputSize="lg" />
+                    <InputField placeholder="Search" inputSize="lg" fullWidth />
                   </div>
                   <div>
                     <IconButton
