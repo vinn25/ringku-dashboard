@@ -7,7 +7,7 @@ const SidebarItemCollapse = ({ item }: any) => {
   return (
     <li className="rounded-md hover:bg-violet-900">
       <Tooltip title={item.label} placement="right">
-        <Link href={item.route} className="flex justify-center py-5">
+        <Link href={item.route} className="flex justify-center py-5 text-white">
           <ChatIcon />
         </Link>
       </Tooltip>
