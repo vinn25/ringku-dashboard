@@ -33,6 +33,11 @@ const sidebarItems = [
     label: "Recent Transactions",
     route: "/transaction",
   },
+  {
+    id: "cat-facts",
+    label: "Cat Facts",
+    route: "/cat-facts",
+  },
 ];
 
 const sidebarBottom = [
