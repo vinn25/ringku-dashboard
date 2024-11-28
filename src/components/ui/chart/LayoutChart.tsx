@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import InfoIcon from "@/assets/icon-info-.svg";
 import ChartImage from "@/assets/image-chart.svg";
@@ -7,6 +9,8 @@ import ButtonDefault from "@/components/Button/ButtonDefault";
 import LifetimeIncome from "@/assets/image-lifetime-income.svg";
 import LifetimeOutcome from "@/assets/image-lifetime-outcome.svg";
 import BonusIncome from "@/assets/image-bonus-income.svg";
+import DatePicker from "@/components/Date/DatePicker";
+import localeEn from "air-datepicker/locale/en";
 
 const VariantIncome = [
   {
@@ -47,6 +51,13 @@ const LayoutChart = () => {
             Statistic
           </div>
           <div className="flex flex-row gap-3">
+            <div className="flex gap-1 px-3 py-[6px] bg-neutral-10 border-neutral-40 border-2 rounded-[6px] text-text-sm font-medium text-neutral-90 cursor-pointer">
+              <DatePicker
+                // range={true}
+                locale={localeEn}
+                position={"top left"}
+              />
+            </div>
             <div className="flex gap-1 px-3 py-[6px] bg-neutral-10 border-neutral-40 border-2 rounded-[6px] text-text-sm font-medium text-neutral-90 cursor-pointer">
               Income Chart
               <Image src={ChevronDownIcon} alt="ChevronDownIcon" />
